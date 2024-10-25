@@ -13,8 +13,8 @@ pipeline {
         stage('Build and Run Docker Container') {
             steps {
                 script {
-                    bat "docker rm -f 2320 || exit 0"
-                    bat "docker run -d --2320 praptiajgaonkar/img"
+                    bat "docker rm -f 2302 || exit 0"
+                    bat "docker run -d --2302 praptiajgaonkar/img"
                 }
             }
         }
