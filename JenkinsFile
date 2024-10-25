@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    bat "docker build -t praptiajgaonkar/img ."
+                }
+            }
+        }
+        stage('Build and Run Docker Container') {
+            steps {
+                script {
+                    bat "docker rm -f my-app-container2 || exit 0"
+                    bat "docker run -d --name my-app-container2 praptiajgaonkar/img"
+                }
+            }
+        }
+    }
+}
