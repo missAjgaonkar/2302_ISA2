@@ -14,7 +14,7 @@ pipeline {
             steps {
                 script {
                     bat "docker rm -f 2302 || exit 0"
-                    bat "docker run -d --2302 praptiajgaonkar/img2302"
+                    bat "docker run -d --name 2302 praptiajgaonkar/img2302"
                 }
             }
         }
