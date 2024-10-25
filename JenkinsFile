@@ -6,7 +6,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    bat "docker build -t praptiajgaonkar/img ."
+                    bat "docker build -t praptiajgaonkar/img2302 ."
                 }
             }
         }
@@ -14,7 +14,7 @@ pipeline {
             steps {
                 script {
                     bat "docker rm -f 2302 || exit 0"
-                    bat "docker run -d --2302 praptiajgaonkar/img"
+                    bat "docker run -d --2302 praptiajgaonkar/img2302"
                 }
             }
         }
